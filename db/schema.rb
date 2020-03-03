@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_02_232721) do
+ActiveRecord::Schema.define(version: 2020_03_03_201334) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bookings", force: :cascade do |t|
+    t.integer "total_price"
+    t.bigint "session_id"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["session_id"], name: "index_bookings_on_session_id"
+    t.index ["user_id"], name: "index_bookings_on_user_id"
+  end
 
   create_table "ceremonies", force: :cascade do |t|
     t.string "name"
@@ -25,6 +35,14 @@ ActiveRecord::Schema.define(version: 2020_03_02_232721) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_ceremonies_on_user_id"
+  end
+
+  create_table "sessions", force: :cascade do |t|
+    t.bigint "ceremony_id"
+    t.datetime "start_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["ceremony_id"], name: "index_sessions_on_ceremony_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -39,6 +57,8 @@ ActiveRecord::Schema.define(version: 2020_03_02_232721) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "bookings", "sessions"
+  add_foreign_key "bookings", "users"
   add_foreign_key "ceremonies", "users"
+  add_foreign_key "sessions", "ceremonies"
 end
-
