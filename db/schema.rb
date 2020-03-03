@@ -41,3 +41,4 @@ ActiveRecord::Schema.define(version: 2020_03_02_232721) do
 
   add_foreign_key "ceremonies", "users"
 end
+

@@ -12,3 +12,4 @@ class CreateCeremonies < ActiveRecord::Migration[5.2]
     end
   end
 end
+

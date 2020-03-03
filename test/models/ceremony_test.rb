@@ -5,3 +5,4 @@ class CeremonyTest < ActiveSupport::TestCase
   #   assert true
   # end
 end
+
