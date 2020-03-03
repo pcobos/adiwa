@@ -5,6 +5,7 @@ class CeremoniesController < ApplicationController
     end
 
   def show
+    @ceremony = Ceremony.find(params[:id])
   end
 
   def new
