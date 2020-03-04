@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  has_many :ceremonies
+  has_many :ceremonies, dependent: :destroy
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable

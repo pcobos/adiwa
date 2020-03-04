@@ -10,6 +10,7 @@ gem 'rails', '5.2.4.1'
 gem 'redis'
 gem 'faker', '~> 2.10', '>= 2.10.2'
 
+gem 'cloudinary', '~> 1.12.0'
 
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.12.0'
@@ -29,5 +30,5 @@ group :development, :test do
   gem 'listen', '~> 3.0.5'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'dotenv-rails'
+  gem 'dotenv-rails', groups: [:development, :test]
 end
