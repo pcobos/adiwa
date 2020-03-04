@@ -27,6 +27,6 @@ class CeremoniesController < ApplicationController
   private
 
   def ceremony_params
-    params.require(:ceremony).permit(:name, :location, :duration, :total_price, :description)
+    params.require(:ceremony).permit(:name, :location, :duration, :total_price, :description, :photo)
   end
 end

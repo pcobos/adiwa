@@ -18,7 +18,7 @@ user = User.create!(
 
 medicines = ['Peyote', 'San Pedro', 'Mushrooms', 'Kambo', 'Bufo Alvarius', 'Yopo', 'Ayahuasca' ]
 
-20.times do |n|
+10.times do |n|
   ceremony = Ceremony.new(
     name: "#{medicines.sample} Ceremony",
     location: Faker::Address.full_address,
