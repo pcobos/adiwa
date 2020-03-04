@@ -16,12 +16,27 @@ user = User.create!(
   password: 123456
 )
 
+addresses = [
+  'Querétaro 99 - Condesa, Ciudad de México, CDMX',
+  'Colima 55 - Condesa, Ciudad de México, CDMX',
+  'Colima 159 - Condesa, Ciudad de México, CDMX',
+  'Guanajuato 118, Ciudad de México, CDMX',
+  'Campeche 281, Ciudad de México, CDMX',
+  'Bajío 231, Ciudad de México, CDMX',
+  'Campeche 237, Ciudad de México, CDMX',
+  'Alfonso Reyes 58, Ciudad de México, CDMX',
+  'Alfonso Reyes 216, Ciudad de México, CDMX',
+  'Tabasco 216, Ciudad de México, CDMX',
+  'Tabasco 198',
+  'Fernando Montes de Oca 28',
+]
+
 medicines = ['Peyote', 'San Pedro', 'Mushrooms', 'Kambo', 'Bufo Alvarius', 'Yopo', 'Ayahuasca' ]
 
-20.times do |n|
+12.times do |n|
   ceremony = Ceremony.new(
     name: "#{medicines.sample} Ceremony",
-    location: Faker::Address.full_address,
+    location: addresses[n],
     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit " * 5,
     total_price: rand(1000..3000),
     duration: "#{rand(1..10)} days",
