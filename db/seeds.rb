@@ -33,7 +33,7 @@ addresses = [
 
 medicines = ['Peyote', 'San Pedro', 'Mushrooms', 'Kambo', 'Bufo Alvarius', 'Yopo', 'Ayahuasca' ]
 
-12.times do |n|
+10.times do |n|
   ceremony = Ceremony.new(
     name: "#{medicines.sample} Ceremony",
     location: addresses[n],

@@ -1,8 +1,13 @@
-<div class="card-product">
-  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-  <div class="card-product-infos">
-    <h2><%= ceremony.name %></h2>
-    <p><%= ceremony.description %></p>
+<%= link_to ceremony_path(ceremony) do %>
+  <div class="card-product">
+    <% if ceremony.photo.attached? %>
+      <%= cl_image_tag ceremony.photo.key, class: "card-product-img" %>
+    <% else %>
+      <img class="card-product-img" src="https://source.unsplash.com/featured/<%= rand(2000) %>/?medicinal-plant" />
+    <% end %>
+    <div class="card-product-infos">
+      <h2><%= ceremony.name %></h2>
+      <p><%= ceremony.description %></p>
+    </div>
   </div>
-</div>
-
+<% end %>
