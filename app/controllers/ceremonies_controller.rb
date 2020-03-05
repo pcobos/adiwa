@@ -1,6 +1,6 @@
 class CeremoniesController < ApplicationController
 
-  def index 
+  def index
     @ceremonies = Ceremony.all
 
     if params[:query].present?
@@ -9,7 +9,7 @@ class CeremoniesController < ApplicationController
     else
       @ceremonies = Ceremony.geocoded
     end
-    
+
     @markers = @ceremonies.map do |ceremony|
       {
         lat: ceremony.latitude,
