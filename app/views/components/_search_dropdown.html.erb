@@ -1,0 +1,54 @@
+<div class="search-dropdown-wrapper">
+  <div class="form-inline justify-content-center">
+    <%= form_tag ceremonies_path, method: :get, class: "w-100 d-flex " do %>
+      <%= text_field_tag :query,
+          params[:query],
+          class: "form-control search-input",
+          placeholder: "Find a ceremony"
+                                      %>
+      <%= submit_tag "Search", class: "btn btn-success ml-1 flex-grow-1" %>
+    <% end %>
+  </div>
+
+  <div class="search-dropdown-menu">
+      <%=link_to root_path, class: "icon" do %>
+        <%=image_tag "https://res.cloudinary.com/pcobos85/image/upload/v1583360735/001-leaves.svg" %>
+        <p>Ayahuasca</p>
+      <% end %>
+
+      <%=link_to root_path, class: "icon" do %>
+        <img src="https://res.cloudinary.com/pcobos85/image/upload/v1583360735/002-soy.svg">
+        <p>Yopo</p>
+      <% end %>
+
+      <%=link_to root_path, class: "icon" do %>
+        <img src="https://res.cloudinary.com/pcobos85/image/upload/v1583360735/003-toad.svg">
+        <p>Bufo Alvarius</p>
+      <% end %>
+
+      <%=link_to root_path, class: "icon" do %>
+        <img src="https://res.cloudinary.com/pcobos85/image/upload/v1583360735/006-cactus.svg">
+        <p>Peyote</p>
+      <% end %>
+
+      <%=link_to root_path, class: "icon" do %>
+        <img src="https://res.cloudinary.com/pcobos85/image/upload/v1583360735/004-frog.svg">
+        <p>Kambo</p>
+      <% end %>
+
+      <%=link_to root_path, class: "icon" do %>
+        <img src="https://res.cloudinary.com/pcobos85/image/upload/v1583366147/green-tea.svg">
+        <p>Tobacco</p>
+      <% end %>
+
+      <%=link_to root_path, class: "icon" do %>
+        <img src="https://res.cloudinary.com/pcobos85/image/upload/v1583360735/005-mushroom.svg">
+        <p>Mushrooms</p>
+      <% end %>
+
+      <%=link_to root_path, class: "icon" do %>
+        <img src="https://res.cloudinary.com/pcobos85/image/upload/v1583360737/007-cactus-1.svg">
+        <p>San Pedro</p>
+      <% end %>
+  </div>
+</div>
