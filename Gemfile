@@ -10,6 +10,7 @@ gem 'rails', '5.2.4.1'
 gem 'redis'
 gem 'faker', '~> 2.10', '>= 2.10.2'
 
+gem 'cloudinary', '~> 1.12.0'
 
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.12.0'
@@ -17,6 +18,7 @@ gem 'sassc-rails'
 gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
+gem 'geocoder'
 
 group :development do
   gem 'web-console', '>= 3.3.0'

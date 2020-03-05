@@ -1,8 +1,24 @@
 class CeremoniesController < ApplicationController
 
-  def index
+  def index 
     @ceremonies = Ceremony.all
+
+    if params[:query].present?
+      sql_query = "city ILIKE :query OR address ILIKE :query"
+      @ceremonies = Ceremony.geocoded.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @ceremonies = Ceremony.geocoded
     end
+    
+    @markers = @ceremonies.map do |ceremony|
+      {
+        lat: ceremony.latitude,
+        lng: ceremony.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { ceremony: ceremony }),
+      }
+    end
+    # puts @markers.inspect
+  end
 
   def show
     @ceremony = Ceremony.find(params[:id])
@@ -27,6 +43,6 @@ class CeremoniesController < ApplicationController
   private
 
   def ceremony_params
-    params.require(:ceremony).permit(:name, :location, :duration, :total_price, :description)
+    params.require(:ceremony).permit(:name, :location, :duration, :total_price, :description, :photo)
   end
 end
