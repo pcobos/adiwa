@@ -1,7 +1,11 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: transparent;
+  background: #070;
   z-index: 3;
+
+  &.transparent {
+    background: transparent;
+  }
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -9,7 +13,7 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 100px;
 }
 
 .nav-link {
