@@ -37,7 +37,7 @@ medicines = ['Peyote', 'San Pedro', 'Mushrooms', 'Kambo', 'Bufo Alvarius', 'Yopo
   ceremony = Ceremony.new(
     name: "#{medicines.sample} Ceremony",
     location: addresses[n],
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit " * 5,
+    description: "This deep immersion retreat is an opportunity to enter into a sacred space away from habitual daily life. This allows oneself to confront disharmonies and to comprehend and heal origins of suffering and disconnection. The deep immersion takes the participant on a journey of profound self-healing and understanding through the discovery of the universe and wisdom within.",
     total_price: rand(1000..3000),
     duration: "#{rand(1..10)} days",
     user: user

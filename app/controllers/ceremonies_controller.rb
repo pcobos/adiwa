@@ -4,7 +4,11 @@ class CeremoniesController < ApplicationController
     @ceremonies = Ceremony.all
 
     if params[:query].present?
-      @ceremonies = Ceremony.geocoded.where("location ILIKE ?", "%#{params[:query]}%")
+
+
+      sql_query = "location ILIKE :query OR name ILIKE :query"
+      @ceremonies = Ceremony.geocoded.where(sql_query, query: "%#{params[:query]}%")
+
     else
       @ceremonies = Ceremony.geocoded
     end
