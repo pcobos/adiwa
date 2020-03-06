@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     collection do
       get 'own_ceremonies'
     end
+    resources :sessions, only: [:new, :create]
   end
 
   resources :sessions, only: [] do

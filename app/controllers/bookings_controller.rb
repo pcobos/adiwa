@@ -10,9 +10,13 @@ class BookingsController < ApplicationController
 
     @booking.session = @session
     @booking.user = current_user
+    @booking.total_price = @session.ceremony.total_price
 
-    @booking.save
-    redirect_to
+    if @booking.save
+      redirect_to @session.ceremony, notice: "Booked succesfully."
+    else
+      render :new
+    end
   end
 
   private
