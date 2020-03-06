@@ -8,8 +8,9 @@
 
 require "faker"
 
-User.destroy_all
+Session.destroy_all
 Ceremony.destroy_all
+User.destroy_all
 
 user = User.create!(
   email: "user@user.com",
