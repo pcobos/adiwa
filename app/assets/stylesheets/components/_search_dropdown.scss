@@ -31,10 +31,10 @@
   position: absolute;
   width: 80%;
 
-  display: none;
+  opacity: 0;
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   background-color: #FAFAFA;
-  opacity: 0.8;
   border-radius: 2px;
   top: 40px;
   padding-top: 20px;
@@ -43,7 +43,7 @@
   padding-right: 10px;
   box-sizing: border-box;
   &.active {
-    display: grid;
+    opacity: 1;
   }
 }
 
