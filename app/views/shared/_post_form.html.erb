@@ -2,7 +2,7 @@
   <div class="row justify-content-center listing">
     <div class="col-xs-12 col-sm-8 col-sm-offset-2">
       <h2>List a new Ceremony</h2><br>
-          <%= simple_form_for(@ceremony) do |f| %>
+          <%= simple_form_for @ceremony do |f| %>
             <%= f.input :name, required: true, autofocus: true %>
             <%= f.input :description, required: true %>
             <%= f.input :location, required: true %>

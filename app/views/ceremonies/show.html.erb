@@ -1,1 +1,10 @@
-<h1>1 Ceremony</h1>
+<h1><%= @ceremony.name %></h1>
+
+<ul>
+  <% @ceremony.sessions.each do |session| %>
+    <li>
+      <%= link_to "Book", session_bookings_path(session), method: :post %>
+      <%= session.start_at %>
+    </li>
+  <% end %>
+</ul>
