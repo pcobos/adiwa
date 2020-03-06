@@ -41,7 +41,14 @@ medicines = ['Peyote', 'San Pedro', 'Mushrooms', 'Kambo', 'Bufo Alvarius', 'Yopo
     total_price: rand(1000..3000),
     duration: "#{rand(1..10)} days",
     user: user
+  )
+
+  5.times do
+    Session.create!(
+      start_at: Time.now + rand(0..240).hours,
+      ceremony: ceremony,
     )
+  end
 
   ceremony.save!
 end
