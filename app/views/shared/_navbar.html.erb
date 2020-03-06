@@ -2,7 +2,8 @@
   <%= link_to root_path, class: "navbar-brand" do %>
     <%= image_tag "https://res.cloudinary.com/doytwihfl/image/upload/v1583447458/adiwa/adiwa-logo_c86tyb.svg" %>
     <% end %>
-
+    <% if navbar_transparent? %>
+  <% end %>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
