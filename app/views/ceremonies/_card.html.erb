@@ -7,7 +7,7 @@
     <% end %>
     <div class="card-product-infos">
       <h2><%= ceremony.name %></h2>
-      <p><%= ceremony.description %></p>
+      <p><%= ceremony.description.truncate(230) %></p>
     </div>
   </div>
 <% end %>
