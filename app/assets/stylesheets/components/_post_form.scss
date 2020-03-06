@@ -1,0 +1,20 @@
+.bga {
+  /* The image used */
+  background-image: url("https://res.cloudinary.com/dvlgiurta/image/upload/v1583523355/adiwa/isabella-juskova-xotmnyN3gdc-unsplash_zq9gxu.jpg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #FAFAFA;
+  // background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.3),rgba(0,0,0,0.1),rgba(0,0,0,0.6));
+
+}
