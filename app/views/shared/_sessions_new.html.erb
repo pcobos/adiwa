@@ -1,0 +1,13 @@
+<div class="bgs d-flex align-items-center">
+  <div class="container pt-5">
+    <div class="row justify-content-center listing">
+      <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+        <h2 class= "">Session Time & Date</h2><br>
+          <%= simple_form_for [@ceremony, @session] do |f| %>
+            <%= f.input :start_at %>
+            <%= f.submit "Add session", class: "btn btn-primary  mt-3" %>
+          <% end %>
+      </div>
+    </div>
+  </div>
+</div>
