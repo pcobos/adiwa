@@ -1,3 +1,5 @@
+$nav-bar-height: 77px;
+
 .carousel-full-height-image {
   max-height: 55vh;
   object-fit: cover;
@@ -7,4 +9,8 @@
     display: inline-block;
     width: 50px;
     height: 50px;
+}
+
+.sticky-offset {
+    top: $nav-bar-height + 10px;
 }
