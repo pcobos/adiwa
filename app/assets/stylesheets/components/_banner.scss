@@ -1,3 +1,6 @@
+
+
+
 .home-banner {
 
   text-align: center;
@@ -5,7 +8,8 @@
 
   h1 {
     font-size: 44px;
-    font-weight: 900;
+    font-style: italic;
+    font-weight: 500;
     text-shadow: 2px 5px 10px #000;
     color: #fafafa;
         line-height: 1em;
@@ -16,22 +20,24 @@
   right: 0;
   bottom: 0;
   min-width: 100%;
-  min-height: 40%;
+  min-height: 100%;
   position: absolute;
   z-index: -1;
 }
 
 .wrapper {
-  margin-top: -85px;
+  position: absolute;
   width: 100%;
+  margin-top: -80px;
 }
 
 .gradient {
   background-image: linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.6),rgba(0,0,0,0.3),rgba(0,0,0,0.9));
   width: 100%;
-  height: calc(100vh - 80px);
-  min-height: 40%;
+  height: calc(105vh);
+  min-height: 600px;
   object-fit: cover;
+  position: absolute;
 }
 
 video {
@@ -43,3 +49,6 @@ video {
   min-height: 600px;
   object-fit: cover;
 }
+
+
+
