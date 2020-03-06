@@ -37,7 +37,7 @@ class CeremoniesController < ApplicationController
     @user = current_user
     @ceremony.user = @user
     if @ceremony.save
-      redirect_to ceremonies_path
+      redirect_to new_ceremony_session_path(@ceremony)
     else
       render :new
     end
